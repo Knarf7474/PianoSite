@@ -4,6 +4,9 @@ document.querySelectorAll('.key').forEach(function(key_elem){
   key_elem.addEventListener('click', function(event){
     let key = Array.from(event.currentTarget.classList).filter(klass => klass.length <= 2)[0];
 
+    //Play a fitting sound
+    // https://github.com/Tonejs/Tone.js/
+
     if (code.length < 8){
       code += key
       update_code_visual();
