@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  piano_site:
+    build: .
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_net" # Seems to help against gateway timeouts???
+
+      - "traefik.http.middlewares.force-https.headers.sslredirect=true"
+
+      # http-non-spiano.
+      - "traefik.http.routers.piano_site.rule=Host(`piano.knarf7474.tk`) || Host(`www.piano.knarf7474.tk`)"
+      - "traefik.http.routers.piano_site.entrypoints=web"
+      - "traefik.http.routers.piano_site.middlewares=force-https"
+
+      # https
+      - "traefik.http.routers.piano_site_secure.rule=Host(`piano.knarf7474.tk`) || Host(`www.piano.knarf7474.tk`)"
+      - "traefik.http.routers.piano_site_secure.entrypoints=web-secure"
+      - "traefik.http.routers.piano_site_secure.tls=true"
+      - "traefik.http.routers.piano_site_secure.tls.certresolver=robbit"
+
+    networks:
+      - traefik_net
+    restart: always
+
+networks:
+  traefik_net:
+    external: true

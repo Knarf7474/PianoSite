@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  piano_site:
+    build:
+      context: .
+      dockerfile: Dockerfile_dev
+    ports:
+    - "8080:80"
+    - "80:80"
+    volumes:
+      - type: bind
+        source: ./src
+        target: /usr/share/nginx/html

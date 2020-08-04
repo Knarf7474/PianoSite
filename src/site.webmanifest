@@ -1,0 +1,26 @@
+{
+    "name": "Frank",
+    "short_name": "Frank",
+    "icons": [
+        {
+            "src": "/images/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/maskable_icon.png",
+            "sizes": "3115x3115",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#007766",
+    "background_color": "#007766",
+    "display": "standalone",
+    "start_url": "/"
+}

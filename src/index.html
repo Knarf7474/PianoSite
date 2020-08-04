@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frank van Beem</title>
+  <meta name="description" content="Piano Puzzle">
+  <meta name="keywords" content="Piano Puzzle">
+  <meta name="author" content="Frank van Beem">
+
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="javascript/main.js" defer></script>
+
+  <!-- realfavicongenerator -->
+  <!--   <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#007766">
+    <meta name="msapplication-TileColor" content="#007766">
+    <meta name="theme-color" content="#007766">
+   -->
+
+  <!-- font -->
+  <script type="text/javascript">
+    WebFontConfig = { google: { families: [ 'Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap' ] } };
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="instructions">
+    <p class="text">
+      Heb je de acht cijferige code gevonden? Goed gedaan! <br>
+      Vertaal de code naar muziek noten en speel ze op de piano!
+    </p>
+    <table class="conversion">
+      <tbody></tbody>
+      <tr>
+        <td>1 &rarr; A</td>
+        <td>2 &rarr; B</td>
+        <td>3 &rarr; C</td>
+      </tr><tr>
+      <td>4 &rarr; D</td>
+      <td>5 &rarr; E</td>
+      <td>6 &rarr; F</td>
+    </tr> <tr>
+      <td>7 &rarr; G</td>
+      <td></td>
+      <td> enz...</td>
+    </tr>
+    </table>
+  </div>
+  <div class="code">
+    <span class="1"><div class="text"></div></span>
+    <span class="2"><div class="text"></div></span>
+    <span class="3"><div class="text"></div></span>
+    <span class="4"><div class="text"></div></span>
+    <span class="5"><div class="text"></div></span>
+    <span class="6"><div class="text"></div></span>
+    <span class="7"><div class="text"></div></span>
+    <span class="8"><div class="text"></div></span>
+  </div>
+  <div class="invalid_message">Dit is niet de juiste code! Probeer het opnieuw.</div>
+  <div class="piano">
+    <ul class="set">
+      <li class="key white F"><span class="text">F</span></li>
+      <li class="key black F#"><span class="text">F#</span></li>
+      <li class="key white G"><span class="text">G</span></li>
+      <li class="key black G#"><span class="text">G#</span></li>
+      <li class="key white A"><span class="text">A</span></li>
+      <li class="key black A#"><span class="text">A#</span></li>
+      <li class="key white B"><span class="text">B</span></li>
+      <li class="key white C"><span class="text">C</span></li>
+      <li class="key black C#"><span class="text">C#</span></li>
+      <li class="key white D"><span class="text">D</span></li>
+      <li class="key black D#"><span class="text">D#</span></li>
+      <li class="key white E"><span class="text">E</span></li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
