@@ -21,6 +21,10 @@ body .wrapper {
 .instructions .conversion {
   margin: 0 auto;
 }
+table.conversion td:not(:first-child) {
+  /*border-spacing: 1em;*/
+  border-left: 1em solid transparent;
+}
 
 .code {
   margin-top: 2em;
@@ -40,12 +44,14 @@ body .wrapper {
 .code span .text {
   font-size: 1.4em;
 }
-.invalid_message {
-  display: none;
+.centered_text {
   text-align: center;
   margin-top: 1em;
   font-size: 1.6em;
   font-weight: 900;
+}
+.invalid_message {
+  display: none;
   color: #ff4545;
 }
 .piano {
@@ -160,4 +166,15 @@ body .wrapper {
 
 .piano ul li:last-child {
   border-radius:0 5px 5px 5px
+}
+
+
+.icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin: 0 0.5em;
+}
+.icon.speaker::before {
+  content: '\f028'
+
 }

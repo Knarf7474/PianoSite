@@ -1,29 +1,37 @@
-let code = '';
+let code = [];
+
+const piano = SampleLibrary.load({
+  instruments: "piano"
+});
+piano.toDestination();
 
 document.querySelectorAll('.key').forEach(function(key_elem){
-  key_elem.addEventListener('click', function(event){
+  key_elem.addEventListener('click', async function(event){
     let key = Array.from(event.currentTarget.classList).filter(klass => klass.length <= 2)[0];
 
-    //Play a fitting sound
-    // https://github.com/Tonejs/Tone.js/
+    const octave = key.match(/[CDE]/) ? 4 : 3
+    piano.triggerAttack(key+octave);
 
     if (code.length < 8){
-      code += key
+      code.push(key)
       update_code_visual();
 
       if (code.length === 8){
         //Check if code correct
-        if (code === 'GCCCGDBC'){ // HEEEEY!! NIET VALSSPELEN JIJ!
-          //Correct
-
+        if (code.join('') === 'GCCCGDBC'){ // HEEEEY!! NIET VALSSPELEN JIJ!
+          //Correct TODO
         } else {
           document.querySelector('.invalid_message').style.display = 'block'
           setTimeout(function() {
-              code = '';
-              update_code_visual();
-            }, 3000);
+            // code = [];
+            // update_code_visual();
+            document.querySelector('.invalid_message').style.display = 'none'
+          }, 3000);
         }
       }
+    } else {
+      code = [key];
+      update_code_visual();
     }
   })
 })
