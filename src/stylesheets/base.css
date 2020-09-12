@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #076;
+  background-color: #23640b;
   color: white;
 }
 
@@ -21,28 +21,51 @@ body .wrapper {
 .instructions .conversion {
   margin: 0 auto;
 }
-table.conversion td:not(:first-child) {
-  /*border-spacing: 1em;*/
-  border-left: 1em solid transparent;
+.instructions table.conversion {
+  margin-bottom: 1em;
 }
+/*table.conversion td:not(:first-child) {*/
+  /*border-spacing: 1em;*/
+  /*border-left: 1em solid transparent;*/
+/*}*/
 
 .code {
   margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
-.code span {
+.code span.n {
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4em;
-  height: 4em;
-  background: #ffffff;
-  border-radius: 1em;
+  width: 2.5em;
+  height: 2.5em;
+  border-bottom: 0.2em solid #FFF;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #FFF;
 }
 .code span .text {
   font-size: 1.4em;
+}
+.code .restart {
+  vertical-align: bottom;
+  border: 0;
+  border-radius: 1em;
+  background-color: #54C833;
+  color: #000;
+  padding: 0.5em;
+  box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
+  font-size: 1em;
+}
+
+.code .icon.restart-icon {
+  margin-bottom: 0.4em;
+}
+.code .icon.restart-icon::before {
+  content: '\f01e';
+  font-size: 2em;
 }
 .centered_text {
   text-align: center;
@@ -50,6 +73,33 @@ table.conversion td:not(:first-child) {
   font-size: 1.6em;
   font-weight: 900;
 }
+
+.code-part {
+  text-align: center;
+}
+.code-part button.to-piano {
+  margin-top: 1em;
+
+  font-size: 1.5em;
+  font-weight: 500;
+  /*text-transform: uppercase;*/
+  color: #000;
+  padding: 0.5em;
+
+  border-radius: 0.3em;
+  border: 0;
+  background-color: #54C833; 
+
+  box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
+}
+button:hover {
+    background-color: #44A628 !important;
+}
+button:active {
+    background-color: #30791C !important; 
+}
+
+
 .invalid_message {
   display: none;
   color: #ff4545;
@@ -168,6 +218,9 @@ table.conversion td:not(:first-child) {
   border-radius:0 5px 5px 5px
 }
 
+.reveal-part, .piano-part {
+  display: none;
+}
 
 .icon::before {
   font-family: "Font Awesome 5 Free";
@@ -176,5 +229,4 @@ table.conversion td:not(:first-child) {
 }
 .icon.speaker::before {
   content: '\f028'
-
 }

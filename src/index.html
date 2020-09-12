@@ -31,56 +31,83 @@
 </head>
 <body>
 <div class="wrapper">
-  <div class="instructions">
-    <p class="text">
-      Heb je de acht cijferige code gevonden? Goed gedaan! <br>
-      Vertaal de code naar muziek noten en speel ze op de piano!
-    </p>
-    <table class="conversion">
-      <tbody></tbody>
-      <tr>
-        <td>1 &rarr; A</td>
-        <td>2 &rarr; B</td>
-        <td>3 &rarr; C</td>
-      </tr><tr>
-      <td>4 &rarr; D</td>
-      <td>5 &rarr; E</td>
-      <td>6 &rarr; F</td>
-    </tr> <tr>
-      <td>7 &rarr; G</td>
-      <td></td>
-      <td> enz...</td>
-    </tr>
-    </table>
+  <div class="code-part">
+    <div class="instructions">
+      <p class="text">
+        Heb je de acht cijfers van de code gevonden? Goed gedaan! <br>
+        Vertaal de cijfers naar acht muzieknoten volgens deze tabel:
+      </p>
+      <table class="conversion">
+        <tbody></tbody>
+        <tr>
+          <td>1 &rarr; A</td>        </tr><tr>
+          <td>2 &rarr; B</td>        </tr><tr>
+          <td>3 &rarr; C</td>      </tr><tr>
+        <td>4 &rarr; D</td>        </tr><tr>
+        <td>5 &rarr; E</td>        </tr><tr>
+        <td>6 &rarr; F</td>
+      </tr> <tr>
+        <td>7 &rarr; G</td>
+        <td></td>
+        <td></td>
+      </tr>
+      </table>
+      Schrijf de gevonden muzieknoten op
+    </div>
+
+    <button class='to-piano'>Ik ben klaar!</button>
   </div>
-  <div class="centered_text sound_on"><span class="icon speaker"></span>Zet je geluid aan!<span class="icon speaker"></span></div>
-  <div class="code">
-    <span class="1"><div class="text"></div></span>
-    <span class="2"><div class="text"></div></span>
-    <span class="3"><div class="text"></div></span>
-    <span class="4"><div class="text"></div></span>
-    <span class="5"><div class="text"></div></span>
-    <span class="6"><div class="text"></div></span>
-    <span class="7"><div class="text"></div></span>
-    <span class="8"><div class="text"></div></span>
+
+  <div class='piano-part'>
+    <div class="centered_text sound_on"><span class="icon speaker"></span>Zet je geluid aan!<span class="icon speaker"></span></div>
+    <div class="instructions">
+      <p class="text">
+        Speel de gevonden muzieknoten op de piano.<br>
+      </p>
+    </div>
+    <div class="code">
+      <span class="n 1"><div class="text"></div></span>
+      <span class="n 2"><div class="text"></div></span>
+      <span class="n 3"><div class="text"></div></span>
+      <span class="n 4"><div class="text"></div></span>
+      <span class="n 5"><div class="text"></div></span>
+      <span class="n 6"><div class="text"></div></span>
+      <span class="n 7"><div class="text"></div></span>
+      <span class="n 8"><div class="text"></div></span>
+      <button class="restart">
+        <div class="icon restart-icon"></div>
+        Opnieuw
+      </button>
+    </div>
+    <div class="centered_text invalid_message">Dit is niet de juiste code! Probeer het opnieuw.</div>
+    <div class="piano">
+      <ul class="set">
+        <li class="key white F"><span class="text">F</span></li>
+        <li class="key black F#"><span class="text">F#</span></li>
+        <li class="key white G"><span class="text">G</span></li>
+        <li class="key black G#"><span class="text">G#</span></li>
+        <li class="key white A"><span class="text">A</span></li>
+        <li class="key black A#"><span class="text">A#</span></li>
+        <li class="key white B"><span class="text">B</span></li>
+        <li class="key white C"><span class="text">C</span></li>
+        <li class="key black C#"><span class="text">C#</span></li>
+        <li class="key white D"><span class="text">D</span></li>
+        <li class="key black D#"><span class="text">D#</span></li>
+        <li class="key white E"><span class="text">E</span></li>
+      </ul>
+    </div>
   </div>
-  <div class="centered_text invalid_message">Dit is niet de juiste code! Probeer het opnieuw.</div>
-  <div class="piano">
-    <ul class="set">
-      <li class="key white F"><span class="text">F</span></li>
-      <li class="key black F#"><span class="text">F#</span></li>
-      <li class="key white G"><span class="text">G</span></li>
-      <li class="key black G#"><span class="text">G#</span></li>
-      <li class="key white A"><span class="text">A</span></li>
-      <li class="key black A#"><span class="text">A#</span></li>
-      <li class="key white B"><span class="text">B</span></li>
-      <li class="key white C"><span class="text">C</span></li>
-      <li class="key black C#"><span class="text">C#</span></li>
-      <li class="key white D"><span class="text">D</span></li>
-      <li class="key black D#"><span class="text">D#</span></li>
-      <li class="key white E"><span class="text">E</span></li>
-    </ul>
+
+
+  <div class="reveal-part">
+    <img src="images/couple.png">
+    <audio class="wedding_music">
+      <source src="music/here_comes_the_birde_cut.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <button class="stop_music">Stop muziek</button>
   </div>
+
 
 </div>
 </body>

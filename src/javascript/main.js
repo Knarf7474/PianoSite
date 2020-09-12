@@ -19,22 +19,46 @@ document.querySelectorAll('.key').forEach(function(key_elem){
       if (code.length === 8){
         //Check if code correct
         if (code.join('') === 'GCCCGDBC'){ // HEEEEY!! NIET VALSSPELEN JIJ!
-          //Correct TODO
+          setTimeout(function() {
+            document.querySelector('.piano-part').style.display = 'none';
+            document.querySelector('.reveal-part').style.display = 'block';
+            const audio = document.querySelector('.wedding_music')
+            audio.loop = true
+            audio.play();
+          }, 500 )
         } else {
           document.querySelector('.invalid_message').style.display = 'block'
-          setTimeout(function() {
-            // code = [];
-            // update_code_visual();
-            document.querySelector('.invalid_message').style.display = 'none'
-          }, 3000);
+          // setTimeout(function() {
+          //   // code = [];
+          //   // update_code_visual();
+          //   document.querySelector('.invalid_message').style.display = 'none'
+          // }, 3000);
         }
       }
     } else {
-      code = [key];
-      update_code_visual();
+      // code = [key];
+      // update_code_visual();
     }
   })
 })
+
+document.querySelector('.code-part button.to-piano').addEventListener('click', function(event){
+  document.querySelector('.code-part').style.display = 'none';
+  document.querySelector('.piano-part').style.display = 'block';
+})
+
+document.querySelector('.code .restart').addEventListener('click', async function(event) {
+  document.querySelector('.invalid_message').style.display = 'none';
+  code = [];
+  update_code_visual();
+})
+
+document.querySelector('.stop_music').addEventListener('click', async function(event) {
+  const audio = document.querySelector('.wedding_music')
+  audio.pause();
+})
+
+
 
 function update_code_visual(){
   const code_section = document.querySelector('.code')
