@@ -35,7 +35,6 @@ body .wrapper {
   justify-content: space-around;
 }
 .code span.n {
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +45,32 @@ body .wrapper {
   font-weight: 900;
   color: #FFF;
 }
+.code span.n.filled:nth-of-type(8) {
+  border-color: #BA0718;
+}
+.code span.n.filled:nth-of-type(7){
+  border-color: #EE681E;
+}
+.code span.n.filled:nth-of-type(6) {
+  border-color: #FDB400;
+}
+.code span.n.filled:nth-of-type(5){
+  border-color: #7E8525;
+}
+.code span.n.filled:nth-of-type(4) {
+  border-color: #A6C600;
+}
+.code span.n.filled:nth-of-type(3){
+  border-color: #1E7E2E;
+}
+.code span.n.filled:nth-of-type(2) {
+  border-color: #18A1D8;
+}
+.code span.n.filled:nth-of-type(1){
+  border-color: #365E8A;
+}
+
+
 .code span .text {
   font-size: 1.4em;
 }
@@ -88,7 +113,7 @@ body .wrapper {
 
   border-radius: 0.3em;
   border: 0;
-  background-color: #54C833; 
+  background-color: #54C833;
 
   box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
 }
@@ -96,7 +121,7 @@ button:hover {
     background-color: #44A628 !important;
 }
 button:active {
-    background-color: #30791C !important; 
+    background-color: #30791C !important;
 }
 
 
@@ -181,7 +206,8 @@ button:active {
   background:linear-gradient(to bottom,#eee 0%,#fff 100%)
 }
 
-.piano ul .white:active {
+.piano ul .white:active,
+.piano ul .white.active{
   border-top:1px solid #777;
   border-left:1px solid #999;
   border-bottom:1px solid #999;
