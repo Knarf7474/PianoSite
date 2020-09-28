@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #23640b;
+  background-color: #3790bb;
+  /* #23640b; */
   color: white;
 }
 
@@ -25,8 +26,8 @@ body .wrapper {
   margin-bottom: 1em;
 }
 /*table.conversion td:not(:first-child) {*/
-  /*border-spacing: 1em;*/
-  /*border-left: 1em solid transparent;*/
+/*border-spacing: 1em;*/
+/*border-left: 1em solid transparent;*/
 /*}*/
 
 .code {
@@ -78,7 +79,8 @@ body .wrapper {
   vertical-align: bottom;
   border: 0;
   border-radius: 1em;
-  background-color: #54C833;
+  background-color: #ACD3FD;
+  /*#54C833;*/
   color: #000;
   padding: 0.5em;
   box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
@@ -102,33 +104,37 @@ body .wrapper {
 .code-part {
   text-align: center;
 }
-.code-part button.to-piano {
+/*.code-part button.to-piano {*/
+/*  !*text-transform: uppercase;*!*/
+
+/*}*/
+button {
   margin-top: 1em;
-
-  font-size: 1.5em;
-  font-weight: 500;
-  /*text-transform: uppercase;*/
   color: #000;
-  padding: 0.5em;
-
+  background-color: #ACD3FD;
+  /*#54C833;*/
   border-radius: 0.3em;
   border: 0;
-  background-color: #54C833;
-
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 500;
   box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
 }
 button:hover {
-    background-color: #44A628 !important;
+  /*background-color: #44A628 !important;*/
+  background-color: #8CADD0 !important;
 }
 button:active {
-    background-color: #30791C !important;
+  /*background-color: #30791C !important;*/
+  background-color: #5D758E !important;
 }
-
 
 .invalid_message {
   display: none;
-  color: #ff4545;
+  /*color: #ff4545;*/
+  color: #993232;
 }
+
 .piano {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -243,9 +249,39 @@ button:active {
 .piano ul li:last-child {
   border-radius:0 5px 5px 5px
 }
-
-.reveal-part, .piano-part {
+.piano-part {
   display: none;
+}
+.reveal-part {
+  display: none;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+.code-part {
+  /*display: none;*/
+}
+.reveal-part .stop_music {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+.reveal-part .stop_music .icon.no-sound::before {
+  content: '\f028'
+}
+.reveal-part img {
+  max-height: 60vh;
+}
+.reveal-part .names {
+  font-size: 4em;
+}
+.reveal-part .date {
+  font-size: 3em;
+}
+.reveal-part .date span{
+  font-size: 1.4em;
+}
+.reveal-part .save-the-date {
+  font-size: 2.2em;
+  font-style: italic;
 }
 
 .icon::before {

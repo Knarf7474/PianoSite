@@ -9,7 +9,7 @@ services:
 
       - "traefik.http.middlewares.force-https.headers.sslredirect=true"
 
-      # http-non-spiano.
+      # http-non-s
       - "traefik.http.routers.piano_site.rule=Host(`geheim.vanbeem.net`) || Host(`www.geheim.vanbeem.net`)"
       - "traefik.http.routers.piano_site.entrypoints=web"
       - "traefik.http.routers.piano_site.middlewares=force-https"
