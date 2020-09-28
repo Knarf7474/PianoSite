@@ -10,12 +10,12 @@ services:
       - "traefik.http.middlewares.force-https.headers.sslredirect=true"
 
       # http-non-spiano.
-      - "traefik.http.routers.piano_site.rule=Host(`piano.knarf7474.tk`) || Host(`www.piano.knarf7474.tk`)"
+      - "traefik.http.routers.piano_site.rule=Host(`geheim.vanbeem.net`) || Host(`www.geheim.vanbeem.net`)"
       - "traefik.http.routers.piano_site.entrypoints=web"
       - "traefik.http.routers.piano_site.middlewares=force-https"
 
       # https
-      - "traefik.http.routers.piano_site_secure.rule=Host(`piano.knarf7474.tk`) || Host(`www.piano.knarf7474.tk`)"
+      - "traefik.http.routers.piano_site_secure.rule=Host(`geheim.vanbeem.net`) || Host(`www.geheim.vanbeem.net`)"
       - "traefik.http.routers.piano_site_secure.entrypoints=web-secure"
       - "traefik.http.routers.piano_site_secure.tls=true"
       - "traefik.http.routers.piano_site_secure.tls.certresolver=robbit"
