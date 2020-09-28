@@ -265,7 +265,7 @@ button:active {
   margin-bottom: 1em;
 }
 .reveal-part .stop_music .icon.no-sound::before {
-  content: '\f028'
+  content: '\f6a9'
 }
 .reveal-part img {
   max-height: 60vh;
