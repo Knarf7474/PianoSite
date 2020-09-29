@@ -85,9 +85,9 @@ function update_code_visual(){
   }
 
   if (incorrect_puzzles.length === 1) {
-    document.querySelector('.invalid_message .puzzles').innerText = 'puzzel ' + incorrect_puzzles[0]
+    document.querySelector('.invalid_message .puzzles').innerText = 'test ' + incorrect_puzzles[0]
   } else if(incorrect_puzzles.length > 1) {
-    document.querySelector('.invalid_message .puzzles').innerText = 'puzzels ' + incorrect_puzzles.join(' & ')
+    document.querySelector('.invalid_message .puzzles').innerText = 'tests ' + incorrect_puzzles.join(' & ')
   }
 }
 
