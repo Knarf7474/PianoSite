@@ -132,7 +132,7 @@ button:active {
 .invalid_message {
   display: none;
   /*color: #ff4545;*/
-  color: #993232;
+  color: #bd0a0a;;
 }
 
 .piano {
@@ -148,10 +148,16 @@ button:active {
   .piano .set {
     font-size: 0.8em;
   }
+  .piano .play_me_card {
+    font-size: 0.8em;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .piano .set {
+    font-size: 0.6em;
+  }
+  .piano .play_me_card {
     font-size: 0.6em;
   }
 }
@@ -160,10 +166,35 @@ button:active {
   .piano .set {
     font-size: 0.55em;
   }
+  .piano .play_me_card {
+    font-size: 0.55em;
+  }
 }
 
 .piano * {
   box-sizing:border-box
+}
+
+/*
+.piano .play_me {
+font-size: 2em;
+padding-top: -1em;
+margin: 0;
+padding: 0;
+margin-top: -1.7em;
+text-align: center;
+width: calc(100% - 1.5em);
+font-family: Tahoma;
+} */
+
+.piano img.play_me_card {
+  margin: auto;
+  margin-bottom: -4em;
+  width: 12em;
+  display: block;
+  position: relative;
+  z-index: 100;
+  left: -6em;
 }
 
 .piano .text {
@@ -180,10 +211,10 @@ button:active {
 }
 
 .piano ul {
-  height:18.875em;
+  height:19.875em;
   width:34em;
   margin:2em auto;
-  padding:3em 0 0 3em;
+  padding:4em 0 0 3em;
   position:relative;
   border:1px solid #160801;
   border-radius:1em;
@@ -250,7 +281,7 @@ button:active {
   border-radius:0 5px 5px 5px
 }
 .piano-part {
-  display: none;
+  /* display: none; */
 }
 .reveal-part {
   display: none;

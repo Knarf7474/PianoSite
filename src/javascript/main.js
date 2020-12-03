@@ -1,5 +1,5 @@
 let code = [];
-const correct_code = 'GCCCGDBC';
+const correct_code = 'GCCCGDBC';  // HEEEEY!! NIET VALSSPELEN JIJ!
 
 const piano = SampleLibrary.load({
   instruments: "piano"
@@ -19,7 +19,7 @@ document.querySelectorAll('.key').forEach(function(key_elem){
 
       if (code.length === 8){
         //Check if code correct
-        if (code.join('') === correct_code){ // HEEEEY!! NIET VALSSPELEN JIJ!
+        if (code.join('') === correct_code){
           setTimeout(async function() {
             await sleep(1000);
             await play_song();
@@ -48,10 +48,10 @@ document.querySelectorAll('.key').forEach(function(key_elem){
   })
 })
 
-document.querySelector('.code-part button.to-piano').addEventListener('click', function(event){
-  document.querySelector('.code-part').style.display = 'none';
-  document.querySelector('.piano-part').style.display = 'block';
-})
+// document.querySelector('.code-part button.to-piano').addEventListener('click', function(event){
+//   document.querySelector('.code-part').style.display = 'none';
+//   document.querySelector('.piano-part').style.display = 'block';
+// })
 
 document.querySelector('.code .restart').addEventListener('click', async function(event) {
   document.querySelector('.invalid_message').style.display = 'none';
