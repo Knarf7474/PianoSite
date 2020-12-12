@@ -12,30 +12,12 @@ body .wrapper {
   padding: 0 3vw;
 }
 
-.instructions {
-  font-size: 1.5em;
-  text-align: center;
-}
-.instructions .text {
-  font-size: 1.3em;
-}
-.instructions .conversion {
-  margin: 0 auto;
-}
-.instructions table.conversion {
-  margin-bottom: 1em;
-}
-/*table.conversion td:not(:first-child) {*/
-/*border-spacing: 1em;*/
-/*border-left: 1em solid transparent;*/
-/*}*/
-
-.code {
+.piano-part .code {
   margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
-.code span.n {
+.piano-part .code span.n {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,36 +28,35 @@ body .wrapper {
   font-weight: 900;
   color: #FFF;
 }
-.code span.n.filled:nth-of-type(8) {
+.piano-part .code span.n.filled:nth-of-type(8) {
   border-color: #BA0718;
 }
-.code span.n.filled:nth-of-type(7){
+.piano-part .code span.n.filled:nth-of-type(7){
   border-color: #EE681E;
 }
-.code span.n.filled:nth-of-type(6) {
+.piano-part .code span.n.filled:nth-of-type(6) {
   border-color: #FDB400;
 }
-.code span.n.filled:nth-of-type(5){
+.piano-part .code span.n.filled:nth-of-type(5){
   border-color: #7E8525;
 }
-.code span.n.filled:nth-of-type(4) {
+.piano-part .code span.n.filled:nth-of-type(4) {
   border-color: #A6C600;
 }
-.code span.n.filled:nth-of-type(3){
+.piano-part .code span.n.filled:nth-of-type(3){
   border-color: #1E7E2E;
 }
-.code span.n.filled:nth-of-type(2) {
+.piano-part .code span.n.filled:nth-of-type(2) {
   border-color: #18A1D8;
 }
-.code span.n.filled:nth-of-type(1){
+.piano-part .code span.n.filled:nth-of-type(1){
   border-color: #365E8A;
 }
 
-
-.code span .text {
+.piano-part .code span .text {
   font-size: 1.4em;
 }
-.code .restart {
+.piano-part .code .restart {
   vertical-align: bottom;
   border: 0;
   border-radius: 1em;
@@ -87,55 +68,27 @@ body .wrapper {
   font-size: 1em;
 }
 
-.code .icon.restart-icon {
+.piano-part .code .icon.restart-icon {
   margin-bottom: 0.4em;
 }
-.code .icon.restart-icon::before {
+.piano-part .code .icon.restart-icon::before {
   content: '\f01e';
   font-size: 2em;
 }
-.centered_text {
+.piano-part .centered_text {
   text-align: center;
   margin-top: 1em;
   font-size: 1.6em;
   font-weight: 900;
 }
 
-.code-part {
-  text-align: center;
-}
-/*.code-part button.to-piano {*/
-/*  !*text-transform: uppercase;*!*/
-
-/*}*/
-button {
-  margin-top: 1em;
-  color: #000;
-  background-color: #ACD3FD;
-  /*#54C833;*/
-  border-radius: 0.3em;
-  border: 0;
-  padding: 0.5em;
-  font-size: 1.5em;
-  font-weight: 500;
-  box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
-}
-button:hover {
-  /*background-color: #44A628 !important;*/
-  background-color: #8CADD0 !important;
-}
-button:active {
-  /*background-color: #30791C !important;*/
-  background-color: #5D758E !important;
-}
-
-.invalid_message {
+.piano-part .invalid_message {
   display: none;
   /*color: #ff4545;*/
   color: #bd0a0a;;
 }
 
-.piano {
+.piano-part .piano {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -144,50 +97,11 @@ button:active {
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-@media only screen and (max-width: 600px) {
-  .piano .set {
-    font-size: 0.8em;
-  }
-  .piano .play_me_card {
-    font-size: 0.8em;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .piano .set {
-    font-size: 0.6em;
-  }
-  .piano .play_me_card {
-    font-size: 0.6em;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .piano .set {
-    font-size: 0.55em;
-  }
-  .piano .play_me_card {
-    font-size: 0.55em;
-  }
-}
-
-.piano * {
+.piano-part .piano * {
   box-sizing:border-box
 }
 
-/*
-.piano .play_me {
-font-size: 2em;
-padding-top: -1em;
-margin: 0;
-padding: 0;
-margin-top: -1.7em;
-text-align: center;
-width: calc(100% - 1.5em);
-font-family: Tahoma;
-} */
-
-.piano img.play_me_card {
+.piano-part .piano img.play_me_card {
   margin: auto;
   margin-bottom: -4em;
   width: 12em;
@@ -197,7 +111,7 @@ font-family: Tahoma;
   left: -6em;
 }
 
-.piano .text {
+.piano-part .piano .text {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -205,12 +119,12 @@ font-family: Tahoma;
   font-family: Helvetica, Arial, Sans-Serif;
 }
 
-.piano .white .text {
+.piano-part .piano .white .text {
   font-size: 2em;
   margin-bottom: 0.3em;
 }
 
-.piano ul {
+.piano-part .piano ul {
   height:19.875em;
   width:34em;
   margin:2em auto;
@@ -222,16 +136,14 @@ font-family: Tahoma;
   box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5)
 }
 
-.piano li {
-  margin:0;
+.piano-part .piano li {
   padding:0;
   list-style:none;
   position:relative;
   float:left;
-  /*vertical-align: bottom;*/
 }
 
-.piano ul .white {
+.piano-part .piano ul .white {
   color: black;
   height:16em;
   width:4em;
@@ -243,8 +155,8 @@ font-family: Tahoma;
   background:linear-gradient(to bottom,#eee 0%,#fff 100%)
 }
 
-.piano ul .white:active,
-.piano ul .white.active{
+.piano-part .piano ul .white:active,
+.piano-part .piano ul .white.active{
   border-top:1px solid #777;
   border-left:1px solid #999;
   border-bottom:1px solid #999;
@@ -252,7 +164,7 @@ font-family: Tahoma;
   background:linear-gradient(to bottom,#fff 0%,#e9e9e9 100%)
 }
 
-.piano .black {
+.piano-part .piano .black {
   color: white;
   height:8em;
   width:2em;
@@ -264,32 +176,96 @@ font-family: Tahoma;
   background:linear-gradient(45deg,#222 0%,#555 100%)
 }
 
-.piano .black:active {
+.piano-part .piano .black:active {
   box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%)
 }
 
 .piano .A, .piano .G, .piano .B, .piano .D, .piano .E {
-  margin:0 0 0 -1em
+  margin: 0 0 0 -1em;
 }
 
-.piano ul li:first-child {
-  border-radius:5px 0 5px 5px
+.piano-part .piano ul li:first-child {
+  border-radius:5px 0 5px 5px;
 }
 
-.piano ul li:last-child {
-  border-radius:0 5px 5px 5px
+.piano-part .piano ul li:last-child {
+  border-radius:0 5px 5px 5px;
 }
-.piano-part {
+
+/ *PIANO PART - RESPONSIVE */
+@media only screen and (max-width: 600px) {
+  .piano-part .piano .set {
+    font-size: 0.8em;
+  }
+  .piano-part .piano .play_me_card {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .piano-part .piano .set {
+    font-size: 0.6em;
+  }
+  .piano-part .piano .play_me_card {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .piano-part .piano .set {
+    font-size: 0.55em;
+  }
+  .piano-part .piano .play_me_card {
+    font-size: 0.55em;
+  }
+}
+
+/* TABLE-PART*/
+/* for testing */
+/* .piano-part { */
   /* display: none; */
+/* } */
+.table-part {
+  display: none;
 }
+.table-part .story {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  font-weight: 900;
+}
+.table-part .opdracht_text {
+  margin-bottom: 2em;
+
+}
+.table-part button.envelope {
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  padding: 0;
+  box-shadow: none;
+}
+.table-part button.envelope:hover {
+  background-color: transparent;
+}
+.table-part button.envelope:active {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 530px) {
+  .table-part .envelope .table_image {
+    width: 80%
+  }
+}
+
+/* REVEAL-PART */
 .reveal-part {
   display: none;
   text-align: center;
   font-family: 'Dancing Script', cursive;
-}
-.code-part {
-  /*display: none;*/
 }
 .reveal-part .stop_music {
   font-size: 0.8em;
@@ -313,6 +289,31 @@ font-family: Tahoma;
 .reveal-part .save-the-date {
   font-size: 2.2em;
   font-style: italic;
+}
+
+/* GENERAL ICONS AND BUTTONS */
+.opdracht_text {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 900;
+}
+
+button {
+  margin-top: 1em;
+  color: #000;
+  background-color: #ACD3FD;
+  border-radius: 0.3em;
+  border: 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
+}
+button:hover {
+  background-color: #8CADD0;
+}
+button:active {
+  background-color: #5D758E;
 }
 
 .icon::before {

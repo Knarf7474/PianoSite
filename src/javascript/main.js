@@ -1,3 +1,23 @@
+// Navigation
+document.querySelector('.table-part button.envelope').addEventListener('click', function(event){
+  document.querySelector('.table-part').style.display = 'none';
+  document.querySelector('.reveal-part').style.display = 'block';
+  start_music();
+})
+
+// Reveal part
+function start_music(){
+  const audio = document.querySelector('.wedding_music')
+  audio.loop = true
+  audio.play();
+}
+
+document.querySelector('.stop_music').addEventListener('click', async function(event) {
+  const audio = document.querySelector('.wedding_music')
+  audio.pause();
+})
+
+// Piano code
 let code = [];
 const correct_code = 'GCCCGDBC';  // HEEEEY!! NIET VALSSPELEN JIJ!
 
@@ -26,42 +46,22 @@ document.querySelectorAll('.key').forEach(function(key_elem){
 
             setTimeout(function () {
               document.querySelector('.piano-part').style.display = 'none';
-              document.querySelector('.reveal-part').style.display = 'block';
-              const audio = document.querySelector('.wedding_music')
-              audio.loop = true
-              audio.play();
+              document.querySelector('.table-part').style.display = 'block';
             }, 500)
           })
         } else {
           document.querySelector('.invalid_message').style.display = 'block'
-          // setTimeout(function() {
-          //   // code = [];
-          //   // update_code_visual();
-          //   document.querySelector('.invalid_message').style.display = 'none'
-          // }, 3000);
         }
       }
-    } else {
-      // code = [key];
-      // update_code_visual();
     }
   })
 })
 
-// document.querySelector('.code-part button.to-piano').addEventListener('click', function(event){
-//   document.querySelector('.code-part').style.display = 'none';
-//   document.querySelector('.piano-part').style.display = 'block';
-// })
-
+// Restart piano code
 document.querySelector('.code .restart').addEventListener('click', async function(event) {
   document.querySelector('.invalid_message').style.display = 'none';
   code = [];
   update_code_visual();
-})
-
-document.querySelector('.stop_music').addEventListener('click', async function(event) {
-  const audio = document.querySelector('.wedding_music')
-  audio.pause();
 })
 
 function update_code_visual(){
