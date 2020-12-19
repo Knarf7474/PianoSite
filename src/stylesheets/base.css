@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: #3790bb;
+  background-color: #62a265;
+   /* #3790bb; */
   /* #23640b; */
   color: white;
 }
@@ -60,7 +61,7 @@ body .wrapper {
   vertical-align: bottom;
   border: 0;
   border-radius: 1em;
-  background-color: #ACD3FD;
+  /* background-color: #ACD3FD; */
   /*#54C833;*/
   color: #000;
   padding: 0.5em;
@@ -222,10 +223,6 @@ body .wrapper {
 }
 
 /* TABLE-PART*/
-/* for testing */
-/* .piano-part { */
-  /* display: none; */
-/* } */
 .table-part {
   display: none;
 }
@@ -262,20 +259,94 @@ body .wrapper {
 }
 
 /* REVEAL-PART */
+/* for testing */
+/* .piano-part {
+  display: none;
+}
+/* .table-part {
+  display: block;
+} */
 .reveal-part {
   display: none;
   text-align: center;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
+  color: black;
 }
-.reveal-part .stop_music {
-  font-size: 0.8em;
-  margin-bottom: 1em;
+.reveal-part .opdracht_text {
+  transition: opacity 2s ease, height 2s 2s ease;
+  height: 1em;
 }
-.reveal-part .stop_music .icon.no-sound::before {
-  content: '\f6a9'
+.reveal-part .opdracht_text.gone {
+  opacity: 0;
+  height: 0em;
 }
-.reveal-part img {
-  max-height: 60vh;
+.reveal-part .card {
+  width: 50%;
+  margin: auto;
+  margin-top: 10em;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition-property: margin-top;
+  transition-duration: 4s;
+  transition-delay: 1s;
+}
+.reveal-part .card.open {
+  margin-top: 0em;
+}
+.reveal-part .card .img, .reveal-part .card .kaart-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reveal-part .card .img:first-of-type {
+  position: relative;
+}
+.reveal-part .card .envelop {
+  margin-top: -84%;
+  transition: margin-top 4s 1s ease, top 4s 4s ease, margin-bottom 4s 4s ease;
+}
+.reveal-part .card.open .envelop {
+  margin-top: 120%;
+  top: 14em;
+  /* margin-bottom: -100%; */
+}
+.reveal-part .card .kaart-container {
+  overflow: hidden;
+  height: 50%;
+  transition-property: height;
+  transition-duration: 4s;
+}
+.reveal-part .card.open .kaart-container {
+  height: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .reveal-part .card {
+    width: 75%
+  }
+}
+@media only screen and (max-width: 530px) {
+  .reveal-part .card {
+    width: 100%
+  }
+}
+/* .reveal-part .images .img.kaart {
+} */
+/* .reveal-part .kaart {
+  height: 78em;
+  background-image: url('/images/kaart-leeg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  padding: 3em;
+}
+.reveal-part .kaart .top, .reveal-part .kaart .bottom {
+  height: 33em;
+}
+.reveal-part .kaart .top {
+  margin-bottom: 4.5em;
 }
 .reveal-part .names {
   font-size: 4em;
@@ -287,8 +358,15 @@ body .wrapper {
   font-size: 1.4em;
 }
 .reveal-part .save-the-date {
-  font-size: 2.2em;
-  font-style: italic;
+  font-size: 3em;
+  font-style: italic; */
+} */
+.reveal-part .stop_music {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+.reveal-part .stop_music .icon.no-sound::before {
+  content: '\f6a9'
 }
 
 /* GENERAL ICONS AND BUTTONS */
@@ -301,19 +379,19 @@ body .wrapper {
 button {
   margin-top: 1em;
   color: #000;
-  background-color: #ACD3FD;
+  background-color: #83ca86;
   border-radius: 0.3em;
   border: 0;
-  padding: 0.5em;
-  font-size: 1.5em;
+  padding: 0.4em;
+  font-size: 1em;
   font-weight: 500;
   box-shadow: 0.1em 0.2em 0.1em 0px rgba(0,0,0,0.75);
 }
 button:hover {
-  background-color: #8CADD0;
+  background-color: #73b776;
 }
 button:active {
-  background-color: #5D758E;
+  background-color: #5e9b61;
 }
 
 .icon::before {

@@ -2,10 +2,27 @@
 document.querySelector('.table-part button.envelope').addEventListener('click', function(event){
   document.querySelector('.table-part').style.display = 'none';
   document.querySelector('.reveal-part').style.display = 'block';
-  start_music();
+})
+
+const card = document.querySelector('.reveal-part .card')
+card.addEventListener('click', function(event){
+  if (!card.classList.contains('open')){
+    open_card();
+  }
 })
 
 // Reveal part
+// open envelope
+function open_card(){
+  const card = document.querySelector('.reveal-part .card')
+  card.classList.add("open");
+  const text = document.querySelector('.reveal-part .opdracht_text')
+  text.classList.add("gone")
+  setTimeout(function(){
+    start_music();
+  }, 1000)
+}
+
 function start_music(){
   const audio = document.querySelector('.wedding_music')
   audio.loop = true
