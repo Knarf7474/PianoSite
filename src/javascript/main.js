@@ -101,11 +101,27 @@ function update_code_visual(){
     }
   }
 
-  if (incorrect_puzzles.length === 1) {
-    document.querySelector('.invalid_message .puzzles').innerText = 'test ' + incorrect_puzzles[0]
-  } else if(incorrect_puzzles.length > 1) {
-    document.querySelector('.invalid_message .puzzles').innerText = 'tests ' + incorrect_puzzles.join(' & ')
+  let puzzle_names = []
+  if (incorrect_puzzles.includes(1)){
+    puzzle_names.push('het huisnummer')
   }
+  if (incorrect_puzzles.includes(2)){
+    puzzle_names.push('het burgernummer')
+  }
+  if (incorrect_puzzles.includes(3)){
+    puzzle_names.push('het sausnummer')
+  }
+  if (incorrect_puzzles.includes(4)){
+    puzzle_names.push('de voorwerpwaarde')
+  }
+  document.querySelector('.invalid_message .puzzles').innerText = puzzle_names.join(', ');
+
+
+  // if (incorrect_puzzles.length === 1) {
+  //   document.querySelector('.invalid_message .puzzles').innerText = 'test ' + incorrect_puzzles[0]
+  // } else if(incorrect_puzzles.length > 1) {
+  //   document.querySelector('.invalid_message .puzzles').innerText = 'tests ' + incorrect_puzzles.join(' & ')
+  // }
 }
 
 async function play_song(one,two,three,four){
