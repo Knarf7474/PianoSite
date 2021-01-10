@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frank van Beem</title>
+  <meta name="description" content="Piano Puzzle">
+  <meta name="keywords" content="Piano Puzzle">
+  <meta name="author" content="Frank van Beem">
+
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="javascript/tone.js" defer></script>
+  <script src="javascript/tone-instruments.js" defer></script>
+  <script src="javascript/main.js" defer></script>
+  <script src="https://kit.fontawesome.com/f006051616.js" crossorigin="anonymous"></script>
+  <!-- realfavicongenerator -->
+  <!--   <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#007766">
+    <meta name="msapplication-TileColor" content="#007766">
+    <meta name="theme-color" content="#007766">
+   -->
+
+  <!-- font -->
+  <script type="text/javascript">
+    // WebFontConfig = { google: { families: [ 'Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap' ] } };
+    WebFontConfig = { google: { families: [ 'Dancing Script:300,300i,400,400i,700,700i,900,900i&display=swap' ] } };
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class='piano-part'>
+    <div class="opdracht_text">OPDRACHT: Speel de acht muzieknoten in de gevonden volgorde op de piano.</div>
+    <div class="centered_text sound_on"><span class="icon speaker"></span>Zet je geluid aan!<span class="icon speaker"></span></div>
+    <div class="code">
+      <span class="n 1"><div class="text"></div></span>
+      <span class="n 2"><div class="text"></div></span>
+      <span class="n 3"><div class="text"></div></span>
+      <span class="n 4"><div class="text"></div></span>
+      <span class="n 5"><div class="text"></div></span>
+      <span class="n 6"><div class="text"></div></span>
+      <span class="n 7"><div class="text"></div></span>
+      <span class="n 8"><div class="text"></div></span>
+      <button class="restart">
+        <div class="icon restart-icon"></div>
+        Opnieuw
+      </button>
+    </div>
+    <div class="centered_text invalid_message">
+      Dit is niet de juiste melodie!<br>
+      Kijk nog eens naar: <span class="puzzles"></span>.<br>
+      Probeer het opnieuw.</div>
+    <div class="piano">
+      <img class="play_me_card" src="/images/speel_mij_card.png">
+      <ul class="set">
+        <!-- <div class='play_me'>Speel mij</div> -->
+        <li class="key white F"><span class="text">F</span></li>
+        <li class="key black F#"><span class="text">F#</span></li>
+        <li class="key white G"><span class="text">G</span></li>
+        <li class="key black G#"><span class="text">G#</span></li>
+        <li class="key white A"><span class="text">A</span></li>
+        <li class="key black A#"><span class="text">A#</span></li>
+        <li class="key white B"><span class="text">B</span></li>
+        <li class="key white C"><span class="text">C</span></li>
+        <li class="key black C#"><span class="text">C#</span></li>
+        <li class="key white D"><span class="text">D</span></li>
+        <li class="key black D#"><span class="text">D#</span></li>
+        <li class="key white E"><span class="text">E</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='table-part'>
+    <div class='story'>
+      Als je terugkomt bij je tafeltje, ligt er een bonnetje voor een kroon van €23.000.
+      Daaronder vind je een verzegelde envelop met de tekst ‘uitnodiging’ en met het logo van een vogel erop.
+      Nu weten we wanneer de overdracht van de kroon plaats zal vinden, en waar we kunnen ingrijpen.
+    </div>
+    <div class='story'>
+      De operatie is geslaagd!
+    </div>
+    <div class="opdracht_text">OPDRACHT: Klik op de envelop.</div>
+    <button class='envelope'>
+      <img class='table_image' src="/images/table.png">
+    </button>
+  </div>
+
+  <div class="reveal-part">
+    <div class="opdracht_text">LAATSTE OPDRACHT: Open de envelop (klik erop).</div>
+    <div class='card'>
+      <img class='img envelop achter' src='images/envelop-achter.png'>
+      <div class='kaart-container'>
+        <img class='img kaart' src='images/kaart-leeg.png'>
+        <div>
+          <button class="stop_music"><span class="icon no-sound"></span>Stop muziek</button>
+        </div>
+      </div>
+      <img class='img envelop voor' src='images/envelop-voor.png'>
+    </div>
+    <audio class="wedding_music">
+      <source src="music/here_comes_the_birde_cut.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+</body>
+</html>
